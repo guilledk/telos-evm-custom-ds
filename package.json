@@ -1,8 +1,9 @@
 {
   "name": "telos-evm-custom-ds",
-  "version": "1.0.0-rc3",
+  "version": "1.0.0",
   "description": "Exports custom transaction and evm block header class for telos evm",
   "main": "./build/index.js",
+  "types":"./src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guilledk/telos-evm-custom-ds.git"

@@ -29,15 +29,21 @@ export class TEVMTransaction extends LegacyTransaction {
      * Format: `rlp([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
      */
     public static fromSerializedTx(serialized: Uint8Array, opts: TxOptions = {}) {
-        let values = RLP.decode(serialized)
+        // this tx on testnet fails due to having non zero remainder bytes
+        //     https://explorer-test.telos.net/transaction/1fdc14c0b1729533d5a88108dfb1d273dab00e1be4095064e9f65195ffbb14e7
+        //     thanks tom! ;)
+        // set stream to true to allow for non-zero remainder
+        let decoded = RLP.decode(serialized, true);
+        let values: TxValuesArray;
 
-        if (!Array.isArray(values)) {
-            if (values.hasOwnProperty('data')) {
+        if (!Array.isArray(decoded)) {
+            if (decoded.hasOwnProperty('data')) {
                 // @ts-ignore
-                values = values.data;
+                values = decoded.data;
             } else
                 throw new Error('Invalid serialized tx input. Must be array')
-        }
+        } else
+            values = decoded;
 
         return this.fromValuesArray(values as TxValuesArray, opts)
     }

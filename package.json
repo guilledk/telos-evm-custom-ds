@@ -1,6 +1,6 @@
 {
   "name": "telos-evm-custom-ds",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Exports custom transaction and evm block header class for telos evm",
   "main": "./build/index.js",
   "types":"./src/index.d.ts",

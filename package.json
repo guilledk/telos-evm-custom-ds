@@ -1,17 +1,17 @@
 {
-  "name": "telos-evm-custom-ds",
+  "name": "@telosnetwork/telos-evm-custom-ds",
   "version": "1.0.2",
   "description": "Exports custom transaction and evm block header class for telos evm",
   "main": "./build/index.js",
   "types":"./src/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guilledk/telos-evm-custom-ds.git"
+    "url": "git+https://github.com/telosnetwork/telos-evm-custom-ds.git"
   },
   "author": "Guillermo Rodriguez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guilledk/telos-evm-custom-ds/issues"
+    "url": "https://github.com/telosnetwork/telos-evm-custom-ds/issues"
   },
   "type": "module",
   "module": "./build/index.js",

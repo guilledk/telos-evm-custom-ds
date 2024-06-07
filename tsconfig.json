@@ -7,7 +7,9 @@
     "outDir": "build",
     "rootDir": "./src",
     "esModuleInterop": true,
-    "strict": false
+    "strict": false,
+    "declaration": true,
+    "declarationMap": true
   },
   "include": [
     "src/**/*.ts"

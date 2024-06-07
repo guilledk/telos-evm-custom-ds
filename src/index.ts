@@ -8,7 +8,7 @@ import {
     TEVMTransactionEIP2930,
     TEVMTransactionEIP4844,
     TEVMTransactionTypes
-} from "./txs";
+} from "./txs/index.js";
 
 export function fromSerializedTEVMData(
     data: Uint8Array,

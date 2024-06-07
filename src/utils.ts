@@ -1,4 +1,4 @@
-import {TransactionType, TxOptions} from "@ethereumjs/tx/src/types";
+import {TransactionType, TxOptions} from "@ethereumjs/tx";
 import {
     TEVMTransaction,
     TEVMTransactionEIP1559,

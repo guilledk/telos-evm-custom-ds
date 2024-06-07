@@ -1,0 +1,13 @@
+diff --git a/node_modules/@ethereumjs/util/dist/cjs/genesis.d.ts b/node_modules/@ethereumjs/util/dist/cjs/genesis.d.ts
+index f99d287..16da627 100644
+--- a/node_modules/@ethereumjs/util/dist/cjs/genesis.d.ts
++++ b/node_modules/@ethereumjs/util/dist/cjs/genesis.d.ts
+@@ -31,7 +31,7 @@ export declare type AccountState = [
+  * ```
+  */
+ export interface GenesisState {
+-    [key: PrefixedHexString]: PrefixedHexString | AccountState;
++    [key: string]: PrefixedHexString | AccountState;
+ }
+ /**
+  * Parses the geth genesis state into Blockchain {@link GenesisState}

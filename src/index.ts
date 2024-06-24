@@ -18,11 +18,11 @@ export function fromSerializedTEVMData(
         // Determine the type.
         switch (data[0]) {
             case TransactionType.AccessListEIP2930:
-                return TEVMTransactionEIP2930.fromSerializedTx(data, txOptions)
+                return TEVMTransactionEIP2930.fromSerializedTx(data.slice(1), txOptions)
             case TransactionType.FeeMarketEIP1559:
-                return TEVMTransactionEIP1559.fromSerializedTx(data, txOptions)
+                return TEVMTransactionEIP1559.fromSerializedTx(data.slice(1), txOptions)
             case TransactionType.BlobEIP4844:
-                return TEVMTransactionEIP4844.fromSerializedTx(data, txOptions)
+                return TEVMTransactionEIP4844.fromSerializedTx(data.slice(1), txOptions)
             default:
                 throw new Error(`TypedTransaction with ID ${data[0]} unknown`)
         }

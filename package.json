@@ -1,6 +1,6 @@
 {
   "name": "telos-evm-custom-ds",
-  "version": "1.1.1-rc11",
+  "version": "1.1.1-rc12",
   "description": "Exports custom transaction and evm block header class for telos evm",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -23,10 +23,10 @@
     "build": "yarn bootstrap && npx tsc"
   },
   "dependencies": {
-    "@ethereumjs/block": "5.2.0",
+    "@ethereumjs/block": "5.3.0",
     "@ethereumjs/common": "4.4.0",
     "@ethereumjs/tx": "5.3.0",
-    "@ethereumjs/util": "9.0.3",
+    "@ethereumjs/util": "9.1.0",
     "rlp": "3.0.0"
   },
   "devDependencies": {
